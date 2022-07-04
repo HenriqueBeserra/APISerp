@@ -1,0 +1,24 @@
+{
+  "name": "apiserp",
+  "version": "1.0.0",
+  "description": "\"Api que serve os dados do banco e dados para a pag de revistas\"",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HenriqueBeserra/APISerp.git"
+  },
+  "author": "Henrique Beserra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HenriqueBeserra/APISerp/issues"
+  },
+  "homepage": "https://github.com/HenriqueBeserra/APISerp#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^1.35.4",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.18"
+  }
+}
