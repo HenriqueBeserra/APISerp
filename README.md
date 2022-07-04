@@ -8,5 +8,10 @@ Nome da revista, escritor e o tipo da revista
 
 _____________________________________________________________________________________________________
 
-LINKS
-<a href="https://apis-erp.vercel.app/app/img">IMAGENS LINKS</a>
+## LINKS
+
+> <a href="https://apis-erp.vercel.app/app/img">IMAGENS LINKS</a>
+
+> <a href="https://apis-erp.vercel.app/app/revistas">REVISTAS LINKS</a>
+
+> <a href="https://apis-erp.vercel.app/app/escritor">ESCRITOR LINKS</a>
