@@ -6,8 +6,13 @@ const PORT = process.env.PORT || 4331;
 const router = require("./routes/route");
 app.use("/app", router);
 
-// Servidor
+app.get("/teste", (req, res) => {
+    res.send(
+    app.use(express.static("./public"))
+    )
+});
 
+// Servidor
 app.listen(PORT, ()=>{
     console.log(`App online at: http://localhost:${PORT}`)
 })
