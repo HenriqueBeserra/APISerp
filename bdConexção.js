@@ -15,7 +15,7 @@ const bancoDeDados = {
 
         let { data, error } = await supabase 
             .from('RevistasSerp')
-            .select('id, revista, tipo')
+            .select('id, titulo, tipo')
 
         if(error) {
             console.error(error);
@@ -45,7 +45,7 @@ const bancoDeDados = {
 
         var{ data, error } = await supabase
             .from('RevistasSerp')
-            .select('id, revista, escritor')
+            .select('id, titulo, escritor')
         
             if(error) {
                 console.error(error)
