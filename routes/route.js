@@ -13,6 +13,10 @@ router.get("/revistas", async (req, res)=> {
         let revistas = {Mensagem:"API SERP Revistas"}
         revistas.informação = await getRevistas();
         
+        res.set({
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+        });
         res.send(JSON.stringify(revistas))
     
     } 
@@ -29,6 +33,10 @@ router.get("/img", async (req, res)=> {
         let imagemUrl = {Mensagem:"API Serp Imagens"};
         imagemUrl.informação = await getImgURL();
 
+        res.set({
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+        });
         res.send(JSON.stringify(imagemUrl));
 
     }
@@ -44,6 +52,10 @@ router.get("/escritor", async (req, res)=>{
         let escritor = {Mensagem: "API Serp Escritores"} 
         escritor.informação = await getEscritor();
 
+        res.set({
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+        });
         res.send(JSON.stringify(escritor)); 
 
     }
