@@ -10,8 +10,8 @@ router.get("/on", (req,res)=> {
 router.get("/revistas", async (req, res)=> {
     
     try{
-        let revistas = {Mensagem:"API SERP Revistas"}
-        revistas.informação = await getRevistas();
+        let revistas = {"Mensagem":"API SERP Revistas"}
+        revistas["informação"] = await getRevistas();
         
         res.set({
             "Content-Type": "application/json",
@@ -30,8 +30,8 @@ router.get("/revistas", async (req, res)=> {
 router.get("/img", async (req, res)=> {
     try{
 
-        let imagemUrl = {Mensagem:"API Serp Imagens"};
-        imagemUrl.informação = await getImgURL();
+        let imagemUrl = {"Mensagem":"API Serp Imagens"};
+        imagemUrl["informação"] = await getImgURL();
 
         res.set({
             "Content-Type": "application/json",
@@ -49,8 +49,8 @@ router.get("/img", async (req, res)=> {
 router.get("/escritor", async (req, res)=>{
     try{
 
-        let escritor = {Mensagem: "API Serp Escritores"} 
-        escritor.informação = await getEscritor();
+        let escritor = {"Mensagem": "API Serp Escritores"} 
+        escritor["informação"] = await getEscritor();
 
         res.set({
             "Content-Type": "application/json",
