@@ -10,7 +10,7 @@ router.get("/on", (req,res)=> {
 router.get("/revistas", async (req, res)=> {
     
     try{
-        let revistas = {"Mensagem":"API SERP Revistas"}
+        let revistas = {}
         revistas["informação"] = await getRevistas();
         
         res.set({
@@ -30,7 +30,7 @@ router.get("/revistas", async (req, res)=> {
 router.get("/img", async (req, res)=> {
     try{
 
-        let imagemUrl = {"Mensagem":"API Serp Imagens"};
+        let imagemUrl = {};
         imagemUrl["informação"] = await getImgURL();
 
         res.set({
@@ -49,7 +49,7 @@ router.get("/img", async (req, res)=> {
 router.get("/escritor", async (req, res)=>{
     try{
 
-        let escritor = {"Mensagem": "API Serp Escritores"} 
+        let escritor = {} 
         escritor["informação"] = await getEscritor();
 
         res.set({
