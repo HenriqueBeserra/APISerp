@@ -37,7 +37,7 @@ router.get("/img", async (req, res)=> {
             "Content-Type": "application/json",
             "Access-Control-Allow-Origin": "*",
         });
-        res.send(imagemUrl);
+        res.send(JSON.stringify(imagemUrl));
 
     }
     catch(err){
