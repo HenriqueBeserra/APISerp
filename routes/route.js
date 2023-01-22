@@ -17,7 +17,7 @@ router.get("/revistas", async (req, res)=> {
             "Content-Type": "application/json",
             "Access-Control-Allow-Origin": "*",
         });
-        res.send(revistas)
+        res.send(JSON.parse(revistas))
     
     } 
     catch(err) {
@@ -37,7 +37,7 @@ router.get("/img", async (req, res)=> {
             "Content-Type": "application/json",
             "Access-Control-Allow-Origin": "*",
         });
-        res.send(JSON.stringify(imagemUrl));
+        res.send(JSON.parse(imagemUrl));
 
     }
     catch(err){
@@ -56,7 +56,7 @@ router.get("/escritor", async (req, res)=>{
             "Content-Type": "application/json",
             "Access-Control-Allow-Origin": "*",
         });
-        res.send(JSON.stringify(escritor)); 
+        res.send(JSON.parse(escritor)); 
 
     }
     catch(err){
