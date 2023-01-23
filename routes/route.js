@@ -75,5 +75,6 @@ router.get("/escritor", async (req, res)=>{
     }
 })
 
+router.use(express.json())
 
 module.exports = router;

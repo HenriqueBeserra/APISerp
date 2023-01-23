@@ -10,6 +10,7 @@ app.use(
         }
     )
 )
+app.use(express.json())
 
 // Rotas
 const router = require("./routes/route");
