@@ -17,13 +17,14 @@ const bancoDeDados = {
             .from('RevistasSerp')
             .select('titulo, tipo, descricao')
 
-        if(error) {
-            console.error(error);
-            return;
-        }
-
-        
-        return data;
+            if(error) {
+                console.error(error);
+                return;
+            }
+            let info = {}
+            info.revistas = data
+         
+        return info;
     },
 
     getImgURL: async () => {
@@ -32,13 +33,14 @@ const bancoDeDados = {
             .from('RevistasSerp')
             .select('url_image' )
 
-        if(error) {
-            console.error(error)
-            return
-        }
-
-        
-        return data;
+            if(error) {
+                console.error(error)
+                return
+            }
+            let info= {}
+            info.img = data
+             
+        return info;
     },
 
     getEscritor: async () => {
@@ -52,13 +54,14 @@ const bancoDeDados = {
                 return
             }
 
-           
+            let info = {}
+            info.revistas = data
                  
-        return data;
+        return info;
     }
 
 }
     
 
-
+bancoDeDados.getImgURL()
 module.exports = bancoDeDados;

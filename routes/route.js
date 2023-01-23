@@ -14,7 +14,7 @@ router.use(
 )
 
 router.get("/on", (req,res)=> {
-    res.send("API ONLINE AT: http://localhost:4340/app ");
+    res.send("API ONLINE AT: http://localhost:4342/app ");
 })
 
 router.get("/revistas", async (req, res)=> {
