@@ -14,19 +14,20 @@ router.use(
 )
 
 router.get("/on", (req,res)=> {
-    res.send("API ONLINE AT: http://localhost:4331/app ");
+    res.send("API ONLINE AT: http://localhost:4340/app ");
 })
 
 router.get("/revistas", async (req, res)=> {
     
     try{
-        let revistas = {}
-        revistas["informação"] = await getRevistas();
+        
+        let revistas = await getRevistas();
         
         res.set({
             "Content-Type": "application/json",
             "Access-Control-Allow-Origin": "*",
         });
+        
         res.send(revistas)
     
     } 
@@ -40,14 +41,13 @@ router.get("/revistas", async (req, res)=> {
 router.get("/img", async (req, res)=> {
     try{
 
-        let imagemUrl = {};
-        imagemUrl["informação"] = await getImgURL();
+        let imagemUrl =  await getImgURL();
 
         res.set({
             "Content-Type": "application/json",
             "Access-Control-Allow-Origin": "*",
         });
-        res.send(JSON.stringify(imagemUrl));
+        res.send(imagemUrl);
 
     }
     catch(err){
@@ -59,14 +59,13 @@ router.get("/img", async (req, res)=> {
 router.get("/escritor", async (req, res)=>{
     try{
 
-        let escritor = {} 
-        escritor["informação"] = await getEscritor();
+        let escritor = await getEscritor();
 
         res.set({
             "Content-Type": "application/json",
             "Access-Control-Allow-Origin": "*",
         });
-        res.send(JSON.stringify(escritor)); 
+        res.send(escritor); 
 
     }
     catch(err){
