@@ -3,6 +3,16 @@ const router = express.Router();
 const { getEscritor, getImgURL, getRevistas } = require("../bdConexção");
 
 
+
+
+router.use(
+    express.urlencoded(
+        {
+            extended : true
+        }
+    )
+)
+
 router.get("/on", (req,res)=> {
     res.send("API ONLINE AT: http://localhost:4331/app ");
 })

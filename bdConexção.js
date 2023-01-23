@@ -54,10 +54,11 @@ const bancoDeDados = {
 
            
                  
-        console.log(data);
+        return data;
     }
 
 }
     
-bancoDeDados.getEscritor()
 
+
+module.exports = bancoDeDados;
